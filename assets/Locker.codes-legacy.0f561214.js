@@ -1,0 +1,1 @@
+System.register([],(function(e,t){"use strict";return{execute:function(){const t=e("IN","A lock pass has been minted. But the name you want to lock had been taken, you can reuse your pass to lock another name.");e("default",{IN:t})}}}));
