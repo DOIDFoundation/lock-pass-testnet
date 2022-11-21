@@ -1,14 +1,1 @@
-
-self.addEventListener('install', function(e) {
-  self.skipWaiting();
-});
-self.addEventListener('activate', function(e) {
-  self.registration.unregister()
-    .then(function() {
-      return self.clients.matchAll();
-    })
-    .then(function(clients) {
-      clients.forEach(client => client.navigate(client.url))
-    });
-});
-    
+if(!self.define){let s,e={};const l=(l,i)=>(l=new URL(l+".js",i).href,e[l]||new Promise((e=>{if("document"in self){const s=document.createElement("script");s.src=l,s.onload=e,document.head.appendChild(s)}else s=l,importScripts(l),e()})).then((()=>{let s=e[l];if(!s)throw new Error(`Module ${l} didn’t register its module`);return s})));self.define=(i,n)=>{const r=s||("document"in self?document.currentScript.src:"")||location.href;if(e[r])return;let a={};const u=s=>l(s,r),o={module:{uri:r},exports:a,require:u};e[r]=Promise.all(i.map((s=>o[s]||u(s)))).then((s=>(n(...s),a)))}}define(["./workbox-30e9d199"],(function(s){"use strict";self.skipWaiting(),s.clientsClaim(),s.precacheAndRoute([{url:"404.html",revision:"c7147f0ab2f075197e41b18464a7c4e8"},{url:"assets/doid-symbol-legacy.9e0147c7.js",revision:null},{url:"assets/doid-symbol.59ae0dcb.js",revision:null},{url:"assets/Erc1155-legacy.6c99e288.js",revision:null},{url:"assets/Erc1155.a06e6baf.js",revision:null},{url:"assets/Erc721-legacy.d4c3f92e.js",revision:null},{url:"assets/Erc721.068eb702.js",revision:null},{url:"assets/index-legacy.138bae11.js",revision:null},{url:"assets/index-legacy.879eafd9.js",revision:null},{url:"assets/index-legacy.8a999811.js",revision:null},{url:"assets/index-legacy.944650f8.js",revision:null},{url:"assets/index.4b770abd.js",revision:null},{url:"assets/index.79a35c0c.css",revision:null},{url:"assets/index.ab0c4c3d.css",revision:null},{url:"assets/index.afb75867.css",revision:null},{url:"assets/index.e2bbfdf4.js",revision:null},{url:"assets/index.e44bfd4b.js",revision:null},{url:"assets/index.fe270887.js",revision:null},{url:"assets/list.3cce9ab0.css",revision:null},{url:"assets/list.b191a4c9.js",revision:null},{url:"assets/Locker-legacy.aab83e8a.js",revision:null},{url:"assets/locker-legacy.b427942a.js",revision:null},{url:"assets/locker.a5eaf8c4.js",revision:null},{url:"assets/Locker.d773e84c.js",revision:null},{url:"assets/polyfills-legacy.47ab4e0a.js",revision:null},{url:"index.html",revision:"c7147f0ab2f075197e41b18464a7c4e8"},{url:"passes/index.html",revision:"c7147f0ab2f075197e41b18464a7c4e8"},{url:"registerSW.js",revision:"1872c500de691dce40960bb85481de07"},{url:"manifest.webmanifest",revision:"6021f5e33ac1290a17274255a13f8489"}],{}),s.cleanupOutdatedCaches(),s.registerRoute(new s.NavigationRoute(s.createHandlerBoundToURL("index.html")))}));
